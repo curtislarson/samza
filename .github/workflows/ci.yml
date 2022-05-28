@@ -53,7 +53,8 @@ jobs:
 
       - name: Tar output
         run: |
-          tar -cvf /tmp/build.tar -C build .
+          ls -la
+          tar -cvf /tmp/build.tar .
           brotli -9 /tmp/build.tar
 
       - name: Artifacts
